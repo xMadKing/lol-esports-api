@@ -1,9 +1,6 @@
 import requests
 
 
-# LEAGUES API
-
-
 def getLeagues():
     url = "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US"
 
@@ -16,7 +13,6 @@ def getLeagues():
 
 
 def getTournamentsForLeague(leagueID):
-
     url = "https://esports-api.lolesports.com/persisted/gw/getTournamentsForLeague?leagueId={0}&hl=en-US".format(
         leagueID
     )
@@ -47,4 +43,3 @@ def getStandings(tournamentID):
 
 
 LCS = 98767991299243165
-print(getTournamentsForLeague(LCS))

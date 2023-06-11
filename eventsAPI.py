@@ -38,8 +38,11 @@ def getCompeletedEvents(eventID=""):
 
     return json
 
+
 def getEventDetails(eventID):
-    url = "https://esports-api.lolesports.com/persisted/gw/getEventDetails?Id={0}&hl=en-US".format(eventID)
+    url = "https://esports-api.lolesports.com/persisted/gw/getEventDetails?Id={0}&hl=en-US".format(
+        eventID
+    )
 
     response = requests.get(
         url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
@@ -47,9 +50,12 @@ def getEventDetails(eventID):
     json = response.json()
 
     return json
+
 
 def getGames(gameID=""):
-    url = "https://esports-api.lolesports.com/persisted/gw/getGames?id={}&hl=en-US".format(gameID)
+    url = "https://esports-api.lolesports.com/persisted/gw/getGames?id={}&hl=en-US".format(
+        gameID
+    )
 
     response = requests.get(
         url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
@@ -58,4 +64,3 @@ def getGames(gameID=""):
 
     return json
 
-print(getSchedule(98767991299243165))

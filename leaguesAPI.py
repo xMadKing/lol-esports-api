@@ -3,36 +3,48 @@ import requests
 
 # LEAGUES API
 
+
 def getLeagues():
     url = "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US"
 
-    response = requests.get(url, headers={'x-api-key':'0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z'})
+    response = requests.get(
+        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
+    )
     json = response.json()
-    
+
     return json
+
 
 def getTournamentsForLeague(leagueID):
-    results = []
 
-    url = "https://esports-api.lolesports.com/persisted/gw/getTournaments?hl=en-US"
+    url = "https://esports-api.lolesports.com/persisted/gw/getTournamentsForLeague?leagueId={0}&hl=en-US".format(
+        leagueID
+    )
 
-    response = requests.get(url, headers={'x-api-key':'0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z'})
-    json = response.json()
+    print(url)
 
-    if not isinstance(leagueID, str):
-        leagueID = str(leagueID)
-
-    for i in range(0, len(json['data']['tournaments'])):
-        if json['data']['tournaments'][i]['leagueId'] == leagueID:
-            results.append(json['data']['tournaments'][i])
-
-    return results
-
-def getStandings(tournamentID):
-    url = "https://esports-api.lolesports.com/persisted/gw/getStandings?hl=en-US"
-
-    response = requests.get(url, headers={'x-api-key':'0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z'})
+    response = requests.get(
+        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
+    )
     json = response.json()
 
     return json
 
+
+def getStandings(tournamentID):
+    url = "https://esports-api.lolesports.com/persisted/gw/getStandings?tournamentId={0}&hl=en-US".format(
+        tournamentID
+    )
+
+    print(url)
+
+    response = requests.get(
+        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
+    )
+    json = response.json()
+
+    return json
+
+
+LCS = 98767991299243165
+print(getTournamentsForLeague(LCS))

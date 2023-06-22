@@ -1,19 +1,18 @@
-import requests
-
+import supfunc
+import requests_cache
+import time
+start_time = time.time()
 
 # this works with either slug or team Id.
 def getTeams(slug=""):
-    url = "https://esports-api.lolesports.com/persisted/gw/getTeams?id={}&hl=en-US".format(
-        slug
-    )
+    if slug == "":
+        url = "https://esports-api.lolesports.com/persisted/gw/getTeams?hl=en-US"
+    else:
+        url = "https://esports-api.lolesports.com/persisted/gw/getTeams?id={}&hl=en-US".format(
+            slug
+        )
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
-
+    return supfunc.request(url)
 
 # this works with either slug or team Id.
 def getTeamPlayers(slug):
@@ -52,5 +51,3 @@ def getTeamCode(slug):
 
     return teamCode
 
-
-print(getTeamCode(98767991926151025))

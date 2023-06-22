@@ -1,4 +1,4 @@
-import requests
+from supfunc import  request
 
 
 def getSchedule(leagueID="", pageToken=""):
@@ -7,23 +7,13 @@ def getSchedule(leagueID="", pageToken=""):
         "&hl=en-US".format(leagueID, pageToken)
     )
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
+    return request(url)
 
 
 def getLive():
     url = "https://esports-api.lolesports.com/persisted/gw/getLive?hl=en-US"
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
+    return request(url)
 
 
 def getCompeletedEvents(eventID=""):
@@ -31,12 +21,7 @@ def getCompeletedEvents(eventID=""):
         eventID
     )
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
+    return request(url)
 
 
 def getEventDetails(eventID):
@@ -44,12 +29,7 @@ def getEventDetails(eventID):
         eventID
     )
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
+    return request(url)
 
 
 def getGames(gameID=""):
@@ -57,10 +37,5 @@ def getGames(gameID=""):
         gameID
     )
 
-    response = requests.get(
-        url, headers={"x-api-key": "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"}
-    )
-    json = response.json()
-
-    return json
+    return request(url)
 

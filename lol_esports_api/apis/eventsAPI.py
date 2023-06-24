@@ -1,10 +1,10 @@
 from apis.supfunc import request
 
 
-def getSchedule(leagueID="", pageToken=""):
+def getSchedule(leagueID, PageToken=""):
     url = (
-        "https://esports-api.lolesports.com/persisted/gw/getSchedule?leagueId={0}&pageToken={1}"
-        "&hl=en-US".format(leagueID, pageToken)
+        "https://esports-api.lolesports.com/persisted/gw/getSchedule?leagueId={0}&PageToken={1}"
+        "&hl=en-US".format(leagueID, PageToken)
     )
 
     return request(url)

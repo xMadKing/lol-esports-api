@@ -5,5 +5,6 @@ import apis.teamsAPI as teamsAPI
 
 def main():
     print("Api working")
+    print(eventsAPI.getSchedule(leaguesAPI.getLeagueBySlug('lec')['id']))
 
 main()

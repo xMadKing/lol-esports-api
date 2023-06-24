@@ -5,7 +5,7 @@ This is just a an easier to install and use (for python) version of https://vick
 
 ## How to install
 
-I plan to eventually package this and upload it to PyPI, however, you can use this right now by installing the code and manually adding the library to your project. 
+You can install this using ```pip install lol-esports-api==0.1```
 
 There are 4 main 'API's in the project
 1. Leagues API (Information in regards to leagues, such as LPL, LCK, LEC, LCS and more)

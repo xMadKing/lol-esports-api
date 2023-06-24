@@ -1,4 +1,4 @@
-from supfunc import request
+from apis.supfunc import request
 
 
 def getSchedule(leagueID="", pageToken=""):

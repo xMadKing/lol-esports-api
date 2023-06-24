@@ -1,4 +1,4 @@
-from supfunc import request
+from apis.supfunc import request
 
 def getLeagues():
     url = "https://esports-api.lolesports.com/persisted/gw/getLeagues?hl=en-US"

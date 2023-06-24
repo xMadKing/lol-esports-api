@@ -1,6 +1,4 @@
-import supfunc
-import time
-start_time = time.time()
+import apis.supfunc as supfunc
 
 
 # this works with either slug or team Id.

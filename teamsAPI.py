@@ -1,7 +1,7 @@
 import supfunc
-import requests_cache
 import time
 start_time = time.time()
+
 
 # this works with either slug or team Id.
 def getTeams(slug=""):
@@ -13,6 +13,7 @@ def getTeams(slug=""):
         )
 
     return supfunc.request(url)
+
 
 # this works with either slug or team Id.
 def getTeamPlayers(slug):
@@ -50,4 +51,3 @@ def getTeamCode(slug):
     teamCode = response["data"]["teams"][0]["code"]
 
     return teamCode
-

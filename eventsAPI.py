@@ -1,4 +1,4 @@
-from supfunc import  request
+from supfunc import request
 
 
 def getSchedule(leagueID="", pageToken=""):
@@ -38,4 +38,3 @@ def getGames(gameID=""):
     )
 
     return request(url)
-

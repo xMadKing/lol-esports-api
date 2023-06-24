@@ -1,7 +1,8 @@
 import requests
 import requests_cache
 
-requests_cache.install_cache('api_cache', expire_after=900)
+requests_cache.install_cache('api_cache', expire_after=(60*15))
+
 
 def request(url):
     response = requests.get(
@@ -9,5 +10,3 @@ def request(url):
     )
 
     return response.json()
-
-

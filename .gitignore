@@ -3,3 +3,4 @@ __pycache__
 api_cache.sqlite
 dist
 build
+lol_esp_api/lol_esp_api.egg-info

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='lol-esp-api',
-    version='0.24',
+    version='0.24.1',
     license='MIT',
     author="xMadKing",
     author_email='ahmad.kh.se@outlook.com',

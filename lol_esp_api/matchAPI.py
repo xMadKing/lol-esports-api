@@ -1,4 +1,4 @@
-from apis.supfunc import request
+from supfunc import request
 
 
 def getWindow(gameID="", startingTime="", participantIds=""):

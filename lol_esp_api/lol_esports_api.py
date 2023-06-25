@@ -1,7 +1,7 @@
-import apis.eventsAPI as eventsAPI
-import apis.leaguesAPI as leaguesAPI
-import apis.matchAPI as matchAPI
-import apis.teamsAPI as teamsAPI
+import eventsAPI as eventsAPI
+import leaguesAPI as leaguesAPI
+import matchAPI as matchAPI
+import teamsAPI as teamsAPI
 
 def main():
     print("Api working")

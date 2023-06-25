@@ -1,4 +1,4 @@
-import apis.supfunc as supfunc
+import supfunc as supfunc
 
 
 # this works with either slug or team Id.

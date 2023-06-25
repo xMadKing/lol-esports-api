@@ -1,4 +1,4 @@
-from supfunc import request
+from lol_esp_api.apis.supfunc import request
 
 
 def getSchedule(leagueID, PageToken=""):

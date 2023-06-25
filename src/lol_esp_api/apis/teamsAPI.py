@@ -1,4 +1,4 @@
-import supfunc as supfunc
+from lol_esp_api.apis.supfunc import request
 
 
 # this works with either slug or team Id.
@@ -10,7 +10,7 @@ def getTeams(slug=""):
             slug
         )
 
-    return supfunc.request(url)
+    return request(url)
 
 
 # this works with either slug or team Id.

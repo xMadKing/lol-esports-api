@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='lol-esp-api',
-    version='0.24.1',
+    version='0.24.5',
     license='MIT',
     author="xMadKing",
     author_email='ahmad.kh.se@outlook.com',
-    packages=find_packages('lol_esp_api'),
-    package_dir={'': 'lol_esp_api'},
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     url='https://github.com/xMadKing/lol-esports-api',
     keywords='League of legends, esports, lolesports, API',
     install_requires=[

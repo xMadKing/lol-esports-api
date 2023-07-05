@@ -16,7 +16,7 @@ def getLive():
     return request(url)
 
 
-def getCompeletedEvents(eventID=""):
+def getCompeletedEvents(eventID):
     url = "https://esports-api.lolesports.com/persisted/gw/getCompletedEvents?tournamentId={0}&hl=en-US".format(
         eventID
     )

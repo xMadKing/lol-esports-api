@@ -37,7 +37,7 @@ def getTournaments():
 
     return request(url)
 
-def getTourmanentById(id):
+def getTournamentById(id):
     response = getTournaments()
     tournaments = response['data']['tournaments']
 
@@ -47,7 +47,7 @@ def getTourmanentById(id):
         
     return "Tournament not found!"
 
-def getTourmanentBySlug(slug):
+def getTournamentBySlug(slug):
     response = getTournaments()
     tournaments = response['data']['tournaments']
 

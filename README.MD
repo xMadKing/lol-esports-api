@@ -17,7 +17,7 @@ You can either import each API individually or import them all using the lol-api
 
 ## Usage
 
-# Teams API
+### Teams API
 
 1. ```getTeams(slug)```
 If not input is specified this returns a list of all teams. If a team slug is specified (URL friendly string of team's name) then it will return that team's information. 
@@ -37,7 +37,7 @@ Returns team IMG url based on the input slug.
 6. ```getTeamCode(slug)```
 Returns team code based on the input slug. 
 
-# Leagues API
+### Leagues API
 
 1. ```getLeagues()```
 Returns all leagues and their information.
@@ -68,3 +68,28 @@ Returns the standings of a tournament based on the input ID.
 
 10. ```getStandingsByStage(TournamentID, stage_slug)```
 Returns the standings for a specific tournament stage based on the input ID and stage slug. 
+
+### matchAPI
+
+1. ```getWindow(gameID, startingTime)```
+Returns game and match details of the specified gameID. startingTime is optional. 
+
+2. ```getDetails(gameID, startingTime, participantIDs)```
+Returns game details based on the specified parameters. startingTime and participantIDs are option. ParticipantIDs is a list of IDs separated by underscores NOT COMMAS. 
+
+### eventsAPI
+
+1. ```getSchedule(leagueID, pageToken)```
+Returns the schedule based on the specified parameters. PageToken is optional.
+
+2. ```getLive()```
+Returns the live events.
+
+3. ```getCompletedEvents(tournamentID)```
+Returns the schedule of completed events.
+
+4. ```getEventDetails(eventID)```
+Returns the details of an event. 
+
+5. ```getGames(gameIDs)```
+Returns the games. GameIDs is optional.

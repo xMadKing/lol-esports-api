@@ -1,13 +1,25 @@
 from lol_esp_api.apis.supfunc import request
 
 
-def getSchedule(leagueID, PageToken=""):
+def getSchedule(leagueID, pageToken=""):
     url = (
-        "https://esports-api.lolesports.com/persisted/gw/getSchedule?leagueId={0}&PageToken={1}"
-        "&hl=en-US".format(leagueID, PageToken)
+        "https://esports-api.lolesports.com/persisted/gw/getSchedule?leagueId={0}&pageToken={1}"
+        "&hl=en-US".format(leagueID, pageToken)
     )
 
     return request(url)
+
+
+def getAllEvents(leagueID):
+    events = []
+    pageToken = ""
+    while True:
+        schedule = getSchedule(leagueID=leagueID, pageToken=pageToken)["data"]["schedule"]
+        nextEvents, pageToken = schedule["events"], schedule["pages"]["newer"]
+        events += nextEvents
+        if not pageToken:
+            break
+    return events
 
 
 def getLive():
